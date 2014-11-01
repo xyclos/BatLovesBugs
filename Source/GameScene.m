@@ -131,11 +131,13 @@
 
 -(void)decrementLife
 {
-    life -= 1;
-    CCNode *currentHeart = [_hearts objectAtIndex:life-1];
-    currentHeart.visible = NO;
-    if (life == 1) {
-        [self gameOver];
+    if (!_gameOver) {
+        life -= 1;
+        CCNode *currentHeart = [_hearts objectAtIndex:life-1];
+        currentHeart.visible = NO;
+        if (life == 1) {
+            [self gameOver];
+        }
     }
 }
 
