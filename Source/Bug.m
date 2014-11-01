@@ -13,6 +13,7 @@
 -(void)didLoadFromCCB
 {
     self.physicsBody.collisionType = @"bug";
+    self.physicsBody.collisionGroup = @"bug";
 }
 
 @end

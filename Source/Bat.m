@@ -12,7 +12,7 @@
 
 -(void)didLoadFromCCB
 {
-    CCLOG(@"bat loaded.");
+    self.physicsBody.collisionType = @"bat";
 }
 
 @end
