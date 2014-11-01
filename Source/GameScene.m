@@ -59,10 +59,8 @@
             spawnBugInterval = 2.0f;
         } else if (score > 20.f && score < 30.f) {
             spawnBugInterval = 1.0f;
-        } else if (score > 30.f && score < 40.f) {
-            spawnBugInterval = 0.5f;
-        } else if (score > 40.f) {
-            spawnBugInterval = 0.2f;
+        } else if (score > 30.f) {
+            spawnBugInterval = 0.7f;
         }
     }
 }
@@ -153,6 +151,10 @@
         _restartButton.visible = YES;
         
         [_bat stopAllActions];
+        
+        for (CCNode *bug in _bugs) {
+            [bug removeFromParent];
+        }
         
         CCActionMoveBy *moveBy = [CCActionMoveBy actionWithDuration:0.2f position:ccp(-2, 2)];
         CCActionInterval *reverseMovement = [moveBy reverse];
