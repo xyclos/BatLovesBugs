@@ -712,8 +712,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>84</real>
+							<real>36</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -746,7 +746,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Retry</string>
+							<string></string>
 							<false/>
 						</array>
 					</dict>
@@ -758,7 +758,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>png/button-retry-off.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -769,7 +769,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>png/button-retry-on.png</string>
 						</array>
 					</dict>
 					<dict>
