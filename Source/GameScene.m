@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "Bug.h"
 #import "Bat.h"
+#import "DataHelper.h"
 #import "CCPhysics+ObjectiveChipmunk.h"
 
 @implementation GameScene
@@ -29,7 +30,6 @@
     CCNode *_heart3;
     NSMutableArray *_hearts;
     BOOL _gameOver;
-    CCNode *_restartButton;
 }
 
 -(void)didLoadFromCCB
@@ -139,30 +139,31 @@
     }
 }
 
-- (void)restart {
-    CCScene *scene = [CCBReader loadAsScene:@"GameScene"];
-    [[CCDirector sharedDirector] replaceScene:scene];
-}
-
 -(void)gameOver
 {
     if (!_gameOver) {
         _gameOver = YES;
-        _restartButton.visible = YES;
         
         [_bat stopAllActions];
         
         for (CCNode *bug in _bugs) {
             [bug removeFromParent];
         }
+        [self updateScore];
         
-        CCActionMoveBy *moveBy = [CCActionMoveBy actionWithDuration:0.2f position:ccp(-2, 2)];
-        CCActionInterval *reverseMovement = [moveBy reverse];
-        CCActionSequence *shakeSequence = [CCActionSequence actionWithArray:@[moveBy, reverseMovement]];
-        CCActionEaseBounce *bounce = [CCActionEaseBounce actionWithAction:shakeSequence];
-        
-        [self runAction:bounce];
+        CCScene *scene = [CCBReader loadAsScene:@"GameOverScene"];
+        [[CCDirector sharedDirector] replaceScene:scene];
     }
+}
+
+- (void)updateScore {
+    [[DataHelper sharedInstance] loadData];
+    [DataHelper sharedInstance].score = score;
+    int currentHigh = [DataHelper sharedInstance].highScore;
+    if (currentHigh < score) {
+        [DataHelper sharedInstance].highScore = score;
+    }
+    [[DataHelper sharedInstance] saveData];
 }
 
 @end

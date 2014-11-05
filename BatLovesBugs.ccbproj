@@ -202,8 +202,20 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>png/hud_heartFull.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>png/text-logo.png</key>
 		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>png/text_game_over.png</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>

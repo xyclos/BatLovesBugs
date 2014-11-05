@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="CIDR_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file:///Applications/Xcode-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsqlite3.dylib">
-      <sourceFolder url="file:///Applications/Xcode-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/usr/lib/libsqlite3.dylib" isTestSource="false" />
+    <content url="file:///Applications/Xcode-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib/libsqlite3.dylib">
+      <sourceFolder url="file:///Applications/Xcode-Beta.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/usr/lib/libsqlite3.dylib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />

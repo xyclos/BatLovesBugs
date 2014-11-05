@@ -36,7 +36,9 @@
 		B77F1B3E17B978D7009739AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3D17B978D7009739AE /* Foundation.framework */; };
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
+		E11AD3301A0A6A3E0078B10C /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E11AD32F1A0A6A3E0078B10C /* GameOverScene.m */; };
 		E1409DEC1A04736500739B67 /* Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = E1409DEB1A04736500739B67 /* Detector.m */; };
+		E1409DF01A07F4CE00739B67 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1409DEF1A07F4CE00739B67 /* DataHelper.m */; };
 		E1AE3E9F1A013EBD00447ED2 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE3E9E1A013EBD00447ED2 /* GameScene.m */; };
 		E1AE3EA31A0146BA00447ED2 /* Bat.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE3EA21A0146BA00447ED2 /* Bat.m */; };
 		E1AE3EA61A0146CB00447ED2 /* Bug.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE3EA51A0146CB00447ED2 /* Bug.m */; };
@@ -94,9 +96,13 @@
 		B77F1B3F17B978D7009739AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		E11AD32E1A0A6A3E0078B10C /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = Source/GameOverScene.h; sourceTree = "<group>"; };
+		E11AD32F1A0A6A3E0078B10C /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverScene.m; path = Source/GameOverScene.m; sourceTree = "<group>"; };
 		E13CA4721A02F4B800A1A3B7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		E1409DEA1A04736500739B67 /* Detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detector.h; path = Source/Detector.h; sourceTree = "<group>"; };
 		E1409DEB1A04736500739B67 /* Detector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detector.m; path = Source/Detector.m; sourceTree = "<group>"; };
+		E1409DEE1A07F4CE00739B67 /* DataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataHelper.h; path = Source/DataHelper.h; sourceTree = "<group>"; };
+		E1409DEF1A07F4CE00739B67 /* DataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataHelper.m; path = Source/DataHelper.m; sourceTree = "<group>"; };
 		E1AE3E9D1A013EBD00447ED2 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Source/GameScene.h; sourceTree = "<group>"; };
 		E1AE3E9E1A013EBD00447ED2 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Source/GameScene.m; sourceTree = "<group>"; };
 		E1AE3EA11A0146BA00447ED2 /* Bat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bat.h; path = Source/Bat.h; sourceTree = "<group>"; };
@@ -140,6 +146,8 @@
 			children = (
 				B737893D1807617C0076A88C /* AppDelegate.h */,
 				B737893E1807617C0076A88C /* AppDelegate.m */,
+				E11AD32E1A0A6A3E0078B10C /* GameOverScene.h */,
+				E11AD32F1A0A6A3E0078B10C /* GameOverScene.m */,
 				E1AE3EA41A0146CB00447ED2 /* Bug.h */,
 				E1AE3EA51A0146CB00447ED2 /* Bug.m */,
 				B7378992180767190076A88C /* MainScene.h */,
@@ -150,6 +158,8 @@
 				E1AE3EA21A0146BA00447ED2 /* Bat.m */,
 				E1409DEA1A04736500739B67 /* Detector.h */,
 				E1409DEB1A04736500739B67 /* Detector.m */,
+				E1409DEE1A07F4CE00739B67 /* DataHelper.h */,
+				E1409DEF1A07F4CE00739B67 /* DataHelper.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -363,6 +373,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1AE3EA61A0146CB00447ED2 /* Bug.m in Sources */,
+				E11AD3301A0A6A3E0078B10C /* GameOverScene.m in Sources */,
+				E1409DF01A07F4CE00739B67 /* DataHelper.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
 				E1AE3EA31A0146BA00447ED2 /* Bat.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
