@@ -37,6 +37,8 @@
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		E11AD3301A0A6A3E0078B10C /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E11AD32F1A0A6A3E0078B10C /* GameOverScene.m */; };
+		E11AD3381A0A8FB50078B10C /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E11AD3371A0A8FB50078B10C /* theme.mp3 */; };
+		E11AD33A1A0AA23A0078B10C /* bite-small3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E11AD3391A0AA23A0078B10C /* bite-small3.wav */; };
 		E1409DEC1A04736500739B67 /* Detector.m in Sources */ = {isa = PBXBuildFile; fileRef = E1409DEB1A04736500739B67 /* Detector.m */; };
 		E1409DF01A07F4CE00739B67 /* DataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E1409DEF1A07F4CE00739B67 /* DataHelper.m */; };
 		E1AE3E9F1A013EBD00447ED2 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E1AE3E9E1A013EBD00447ED2 /* GameScene.m */; };
@@ -98,6 +100,8 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		E11AD32E1A0A6A3E0078B10C /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = Source/GameOverScene.h; sourceTree = "<group>"; };
 		E11AD32F1A0A6A3E0078B10C /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverScene.m; path = Source/GameOverScene.m; sourceTree = "<group>"; };
+		E11AD3371A0A8FB50078B10C /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+		E11AD3391A0AA23A0078B10C /* bite-small3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bite-small3.wav"; sourceTree = "<group>"; };
 		E13CA4721A02F4B800A1A3B7 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		E1409DEA1A04736500739B67 /* Detector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Detector.h; path = Source/Detector.h; sourceTree = "<group>"; };
 		E1409DEB1A04736500739B67 /* Detector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Detector.m; path = Source/Detector.m; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E11AD3321A0A8D710078B10C /* Audio */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -249,6 +254,15 @@
 				B73789861807631A0076A88C /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E11AD3321A0A8D710078B10C /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				E11AD3371A0A8FB50078B10C /* theme.mp3 */,
+				E11AD3391A0AA23A0078B10C /* bite-small3.wav */,
+			);
+			name = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +355,9 @@
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
+				E11AD33A1A0AA23A0078B10C /* bite-small3.wav in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
+				E11AD3381A0A8FB50078B10C /* theme.mp3 in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,

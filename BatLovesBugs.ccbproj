@@ -172,6 +172,8 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>png/button-home-off.png</key>
+		<dict/>
 		<key>png/button-music-off.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -214,8 +216,6 @@
 		</dict>
 		<key>png/text_game_over.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>

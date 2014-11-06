@@ -57,6 +57,18 @@
     return YES;
 }
 
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio stopEverything];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+    [audio playBg:@"theme.mp3" loop:YES];
+}
+
 - (CCScene*) startScene
 {
     return [CCBReader loadAsScene:@"MainScene"];

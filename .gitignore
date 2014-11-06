@@ -2,6 +2,7 @@
 #
 *.ppng
 Source/Resources/Published-Android
+Source/Resources/Published-iOS
 Published-Packages
 
 # Xcode

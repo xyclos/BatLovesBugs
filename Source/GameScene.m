@@ -30,6 +30,8 @@
     CCNode *_heart3;
     NSMutableArray *_hearts;
     BOOL _gameOver;
+    OALSimpleAudio *_audio;
+    CCNode *_hudNode;
 }
 
 -(void)didLoadFromCCB
@@ -37,10 +39,12 @@
     //_physicsNode.debugDraw = YES;
     _physicsNode.collisionDelegate = self;
     self.userInteractionEnabled = YES;
-    life = 4.f;
+    life = 3.f;
     _bugs = [NSMutableArray array];
     _hearts = [NSMutableArray arrayWithObjects:_heart1, _heart2, _heart3, nil];
     _gameOver = NO;
+    _audio = [OALSimpleAudio sharedInstance];
+    [_audio preloadEffect:@"bite-small3.wav"];
 }
 
 -(void)update:(CCTime)delta
@@ -119,6 +123,7 @@
     [bug.parent addChild:eaten];
     [bug removeFromParent];
     [_bugs removeObject:bug];
+    [_audio playEffect:@"bite-small3.wav"];
 }
 
 -(void)incrementScore
@@ -131,9 +136,14 @@
 {
     if (!_gameOver) {
         life -= 1;
-        CCNode *currentHeart = [_hearts objectAtIndex:life-1];
-        currentHeart.visible = NO;
-        if (life == 1) {
+        CCNode *currentHeart = [_hearts objectAtIndex:life];
+//        CCParticleSystem *heartGone = (CCParticleSystem *)[CCBReader load:@"HeartGone"];
+//        heartGone.position = currentHeart.position;
+//        heartGone.autoRemoveOnFinish = YES;
+//        [_hudNode addChild:heartGone];
+        //currentHeart.visible = NO;
+        [currentHeart removeFromParent];
+        if (life == 0) {
             [self gameOver];
         }
     }
