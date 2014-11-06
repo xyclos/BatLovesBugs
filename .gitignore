@@ -41,3 +41,5 @@ xcuserdata
 *.pyc
 *.orig
 *.ninja_log
+
+.idea
