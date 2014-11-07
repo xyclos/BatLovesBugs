@@ -534,11 +534,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>235</real>
-									<real>24</real>
-									<integer>1</integer>
+									<real>0.734375</real>
+									<real>0.94999998807907104</real>
 									<integer>0</integer>
-									<integer>0</integer>
+									<integer>2</integer>
+									<integer>2</integer>
 								</array>
 							</dict>
 							<dict>
@@ -590,6 +590,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
@@ -623,11 +625,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>260</real>
-									<real>24</real>
-									<integer>1</integer>
+									<real>0.8125</real>
+									<real>0.94999998807907104</real>
 									<integer>0</integer>
-									<integer>0</integer>
+									<integer>2</integer>
+									<integer>2</integer>
 								</array>
 							</dict>
 							<dict>
@@ -712,11 +714,11 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>285</real>
-									<real>24</real>
-									<integer>1</integer>
+									<real>0.89999997615814209</real>
+									<real>0.94999998807907104</real>
 									<integer>0</integer>
-									<integer>0</integer>
+									<integer>2</integer>
+									<integer>2</integer>
 								</array>
 							</dict>
 							<dict>
@@ -768,8 +770,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -788,7 +788,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>hudNode</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -800,8 +800,8 @@
 							<real>0.0</real>
 							<real>0.0</real>
 							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
+							<integer>2</integer>
+							<integer>2</integer>
 						</array>
 					</dict>
 					<dict>

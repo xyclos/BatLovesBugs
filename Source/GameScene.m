@@ -39,7 +39,7 @@
     //_physicsNode.debugDraw = YES;
     _physicsNode.collisionDelegate = self;
     self.userInteractionEnabled = YES;
-    life = 3.f;
+    life = 2.f;
     _bugs = [NSMutableArray array];
     _hearts = [NSMutableArray arrayWithObjects:_heart1, _heart2, _heart3, nil];
     _gameOver = NO;
@@ -135,17 +135,18 @@
 -(void)decrementLife
 {
     if (!_gameOver) {
-        life -= 1;
-        CCNode *currentHeart = [_hearts objectAtIndex:life];
-//        CCParticleSystem *heartGone = (CCParticleSystem *)[CCBReader load:@"HeartGone"];
-//        heartGone.position = currentHeart.position;
-//        heartGone.autoRemoveOnFinish = YES;
-//        [_hudNode addChild:heartGone];
-        //currentHeart.visible = NO;
-        [currentHeart removeFromParent];
-        if (life == 0) {
+        if (life == -1) {
             [self gameOver];
+            return;
         }
+        CCNode *currentHeart = [_hearts objectAtIndex:life];
+        CCParticleSystem *heartGone = (CCParticleSystem *)[CCBReader load:@"HeartGone"];
+        heartGone.positionType = currentHeart.positionType;
+        heartGone.position = currentHeart.position;
+        heartGone.autoRemoveOnFinish = YES;
+        [currentHeart.parent addChild:heartGone];
+        [currentHeart removeFromParent];
+        life -= 1;
     }
 }
 
