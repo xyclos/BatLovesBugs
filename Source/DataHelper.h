@@ -14,6 +14,7 @@
 
 @property (assign) int score;
 @property (assign) int highScore;
+@property (assign) BOOL isAudioMute;
 
 -(void) saveData;
 -(void) loadData;

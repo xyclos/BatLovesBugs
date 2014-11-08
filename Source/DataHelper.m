@@ -10,6 +10,7 @@
 
 NSString * const kScore = @"kScore";
 NSString * const kHighScore = @"kHighScore";
+NSString * const kAudioMute = @"kAudioMute";
 
 @implementation DataHelper
 
@@ -19,6 +20,7 @@ NSString * const kHighScore = @"kHighScore";
     if (self) {
         _score = 0;
         _highScore = 0;
+        _isAudioMute = NO;
     }
     return self;
 }
@@ -38,6 +40,7 @@ NSString * const kHighScore = @"kHighScore";
 {
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:self.score] forKey:kScore];
     [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:self.highScore] forKey:kHighScore];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:self.isAudioMute] forKey:kAudioMute];
     
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -50,6 +53,12 @@ NSString * const kHighScore = @"kHighScore";
     } else {
         self.score = 0;
         self.highScore = 0;
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:kAudioMute]) {
+        self.isAudioMute = [(NSNumber *)[[NSUserDefaults standardUserDefaults] objectForKey:kAudioMute] boolValue];
+    } else {
+        self.isAudioMute = NO;
     }
 }
 

@@ -37,5 +37,4 @@
     [_highScoreLabel setString:highScoreString];
 }
 
-
 @end

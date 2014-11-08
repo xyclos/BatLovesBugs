@@ -27,8 +27,13 @@
 
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
+#import "DataHelper.h"
+
 
 @implementation AppController
+{
+    BOOL isAudioMute;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -65,8 +70,12 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
-    [audio playBg:@"theme.mp3" loop:YES];
+    [[DataHelper sharedInstance] loadData];
+    isAudioMute = [DataHelper sharedInstance].isAudioMute;
+    if (!isAudioMute) {
+        OALSimpleAudio *audio = [OALSimpleAudio sharedInstance];
+        [audio playBg:@"theme.mp3" loop:YES];
+    }
 }
 
 - (CCScene*) startScene

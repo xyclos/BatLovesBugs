@@ -32,6 +32,7 @@
     BOOL _gameOver;
     OALSimpleAudio *_audio;
     CCNode *_hudNode;
+    BOOL isAudioMute;
 }
 
 -(void)didLoadFromCCB
@@ -45,6 +46,8 @@
     _gameOver = NO;
     _audio = [OALSimpleAudio sharedInstance];
     [_audio preloadEffect:@"bite-small3.wav"];
+    [[DataHelper sharedInstance] loadData];
+    isAudioMute = [DataHelper sharedInstance].isAudioMute;
 }
 
 -(void)update:(CCTime)delta
@@ -123,7 +126,9 @@
     [bug.parent addChild:eaten];
     [bug removeFromParent];
     [_bugs removeObject:bug];
-    [_audio playEffect:@"bite-small3.wav"];
+    if (!isAudioMute) {
+        [_audio playEffect:@"bite-small3.wav"];    
+    }
 }
 
 -(void)incrementScore
