@@ -172,6 +172,11 @@
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
+		<key>png/bug.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>png/button-home-off.png</key>
 		<dict/>
 		<key>png/button-music-off.png</key>

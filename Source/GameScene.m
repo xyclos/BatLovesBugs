@@ -60,14 +60,27 @@
             timeSinceBug = 0.0f;
         }
         
-        if (score < 10.f) {
-            spawnBugInterval = 4.0f;
-        } else if (score > 10.f && score < 20.f) {
-            spawnBugInterval = 2.0f;
-        } else if (score > 20.f && score < 30.f) {
-            spawnBugInterval = 1.0f;
-        } else if (score > 30.f) {
-            spawnBugInterval = 0.7f;
+        switch (score) {
+            case 0:
+                spawnBugInterval = 4.f;
+                break;
+            case 5:
+                spawnBugInterval = 3.5f;
+                break;
+            case 10:
+                spawnBugInterval = 3.f;
+                break;
+            case 20:
+                spawnBugInterval = 2.f;
+                break;
+            case 30:
+                spawnBugInterval = 1.f;
+                break;
+            case 40:
+                spawnBugInterval = 0.7f;
+                break;
+            default:
+                break;
         }
     }
 }
